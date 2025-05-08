@@ -14,3 +14,7 @@ actions = {
   steal: { difficulty: 20, description: "Attempt to steal", success_text: "You successfully take the item!", failure_text: "You're caught red-handed!" },
   cast_spell: { difficulty: 15, description: "Use magic", success_text: "Your spell works perfectly!", failure_text: "Your spell backfires!" }
 }
+
+actions.each do |name, attrs|
+  Action.create!(name: name.to_s,**attrs)
+end
