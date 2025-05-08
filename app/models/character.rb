@@ -9,4 +9,8 @@ class Character < ApplicationRecord
     update(health: [health - amount, 0].max)
     update(alive: false) if health <= 0
   end
+
+  def heal(amount)
+    update(health : [health + amount, 10].min)
+  end
 end
