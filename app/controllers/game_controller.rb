@@ -4,4 +4,10 @@ class GameController < ApplicationController
   def new
     @character = Character.new
   end
+
+  def show
+    @scenario = Scenario.includes(:actions).order("RANDOM()").first
+    @items = @character.items
+    session[:current_scenario] = @scenario.includes
+  end
 end
