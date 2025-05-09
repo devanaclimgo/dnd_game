@@ -17,4 +17,6 @@ Rails.application.routes.draw do
   resources :game, only: [:show, :update] do
     post 'use_item', on: :member
   end
+
+  get 'game/over', to: 'game#over'
 end
