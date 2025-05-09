@@ -26,3 +26,5 @@ items = [
   { name: "Lucky Charm", description: "Gives +2 to all rolls", effect: "bonus:2" },
   { name: "Cloak", description: "Helps you hide in shadows", effect: "stealth:3" },
 ]
+
+items.each { |item| Item.create!(item) }
