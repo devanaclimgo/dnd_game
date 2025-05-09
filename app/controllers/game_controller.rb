@@ -24,4 +24,7 @@ class GameController < ApplicationController
 
     redirect_to game_over_path unless @character.alive
   end
+
+  def over
+  end
 end
