@@ -18,3 +18,11 @@ actions = {
 actions.each do |name, attrs|
   Action.create!(name: name.to_s,**attrs)
 end
+
+# Create Items
+items = [
+  { name: "Health Potion", description: "Restores 5 health points", effect: "heal:5" },
+  { name: "Dagger", description: "A small but sharp blade", effect: "damage:3" },
+  { name: "Lucky Charm", description: "Gives +2 to all rolls", effect: "bonus:2" },
+  { name: "Cloak", description: "Helps you hide in shadows", effect: "stealth:3" },
+]
