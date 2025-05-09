@@ -44,3 +44,16 @@ scenarios = [
     actions: [:inspect, :steal, :cast_spell]
   },
 ]
+
+scenarios.each do |scenario|
+  S = Scenario.create!(
+    description: scenario[:description],]
+  )
+
+  scenario[:actions].each do |action_name|
+    action = Action.find_by(name: action_name.to_s)
+    s.actions << action if action
+  end
+end
+
+puts "Database seeded successfully!"
