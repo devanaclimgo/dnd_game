@@ -11,6 +11,6 @@ class Character < ApplicationRecord
   end
 
   def heal(amount)
-    update(health : [health + amount, 10].min)
+    update(health: [health + amount, 10].min)
   end
 end
