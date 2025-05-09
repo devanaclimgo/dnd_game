@@ -46,7 +46,7 @@ scenarios = [
 ]
 
 scenarios.each do |scenario|
-  S = Scenario.create!(
+  s = Scenario.create!(
     description: scenario[:description],
   )
 
