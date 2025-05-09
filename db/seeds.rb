@@ -28,3 +28,19 @@ items = [
 ]
 
 items.each { |item| Item.create!(item) }
+
+# Create Scenarios with associated actions
+scenarios = [
+  {
+    description: "You encounter a goblin in the dark forest. What do you do?",
+    actions: [:fight, :talk, :flee, :flirt]
+  },
+  {
+    description: "A mysterious stranger offers you a quest. How do you respond?",
+    actions: [:talk, :flirt, :inspect]
+  },
+  {
+    description: "You find a treasure chest! Do you open it?",
+    actions: [:inspect, :steal, :cast_spell]
+  },
+]
