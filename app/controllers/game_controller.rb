@@ -27,4 +27,10 @@ class GameController < ApplicationController
 
   def over
   end
+
+  def use_item
+    item = @character.items.find(params[:item_id])
+    apply_item_effect(item)
+    item.destroy
+    redirect_to game_path
 end
