@@ -3,7 +3,7 @@ class Character < ApplicationRecord
   has_many :items, through: :character_items
 
   validates :name, presence: true
-  valdates :health, numericality: { greater_than_or_equal_to: 0}
+  validates :health, numericality: { greater_than_or_equal_to: 0}
 
   def take_damage(amount)
     update(health: [health - amount, 0].max)
