@@ -33,4 +33,7 @@ class GameController < ApplicationController
     apply_item_effect(item)
     item.destroy
     redirect_to game_path
+  end
+
+  private
 end
